@@ -1,7 +1,8 @@
-import json
-import requests
+import json 
+import requests 
 import time
 from unittest import TestCase, main
+
 
 class Blog:
 	def __init__(self, nome):
@@ -23,7 +24,7 @@ class Testes(TestCase):
         start = time.time()
 
         blog = Blog("Teste")
-        result =blog.posts()
+        result = blog.posts()
         with open('person.json', 'w') as json_file:
             json.dump(result, json_file)
 

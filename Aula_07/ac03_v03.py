@@ -16,13 +16,13 @@ class OperacaoFabrica(object):
 
     def criar(self, operador):
         if(operador == 'soma'):
-            return Soma() 
+            return Somar() 
         elif (operador == 'subtracao'):
-            return Subtracao()
+            return Subtrair()
         elif (operador == 'divisao'):
-            return Divisao()
+            return Dividir()
         elif (operador == 'multiplicacao'):
-            return Multiplicacao()
+            return Multiplicar()
 
 class Operacao(metaclass=abc.ABCMeta):
 
@@ -31,22 +31,22 @@ class Operacao(metaclass=abc.ABCMeta):
         pass
 
 
-class Soma(Operacao):
+class Somar(Operacao):
     def executar(self, valor1,valor2):        
         resultado = valor1 + valor2
         return resultado
         
-class Subtracao(Operacao):        
+class Subtrair(Operacao):        
     def executar (self, valor1,valor2):
         resultado = valor1 - valor2
         return resultado
         
-class Multiplicacao(Operacao):        
+class Multiplicar(Operacao):        
     def executar (self, valor1,valor2):
         resultado = valor1 * valor2
         return resultado
 
-class Divisao(Operacao):        
+class Dividir(Operacao):        
     def executar (self, valor1,valor2):
         resultado = valor1 / valor2
         return resultado

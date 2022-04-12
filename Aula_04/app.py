@@ -5,6 +5,8 @@ from math import sqrt
 app = Flask(__name__)
 
 @app.route('/')
+
+#criando uma função de teste
 def nao_entre_em_panico():
 
     limite = 100

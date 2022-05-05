@@ -18,11 +18,11 @@ def gravar():
     email = request.form['email']
     endereco = request.form['endereco']
     
-    conectar.gravar(nome,email,endereco)
+    conectar.gravar(nome, email, endereco)
 
     dados = conectar.consulta()
 
-    return 'Dados Gravados'
+    return 'Dados foram Gravados'
 
 @app.route('/consultar')
 def consultar():

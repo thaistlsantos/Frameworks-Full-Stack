@@ -1,5 +1,7 @@
-from flask import Flask, render_template, request
 import conectar
+import sqlite3 as sql
+import os
+from flask import Flask, jsonify, request, render_template
 
 app = Flask(__name__)
 

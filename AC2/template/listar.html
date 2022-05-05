@@ -1,24 +1,26 @@
 <!doctype html>
 <html>
-   <body>
-   
-      <table border = 1>
-         <thead>
+
+<body>
+
+    <table border=1>
+        <thead>
             <td>email</td>
             <td>nome</td>
             <td>endereco</td>
-         </thead>
-         
-         {% for row in rows %}
-            <tr>
-               <td>{{row["email"]}}</td>
-               <td>{{row["nome"]}}</td>
-               <td> {{row["endereco"]}}</td>	
-            </tr>
-         {% endfor %}
-      </table>
-      
-      <a href = "/">Gravando/a>
-      
-   </body>
+        </thead>
+
+        {% for row in rows %}
+        <tr>
+            <td>{{row["email"]}}</td>
+            <td>{{row["nome"]}}</td>
+            <td> {{row["endereco"]}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <a href="/page.html">Gravando/a>
+
+</body>
+
 </html>

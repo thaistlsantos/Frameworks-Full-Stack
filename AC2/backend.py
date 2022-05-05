@@ -1,7 +1,7 @@
 import sqlite3 as sql
 import os
 from flask import Flask, jsonify, request, render_template
-import backend
+
 
 app = Flask(__name__)
 
@@ -21,7 +21,7 @@ def gravar():
         with sql.connect("database.db") as con:
             cur = con.cursor()
             cur.execute(
-                "INSERT INTO usuarios (nome, email, endereco) VALUES (?,?,?)", (nome, email, endereco))
+                "INSERT INTO users (nome, email, endereco) VALUES (?,?,?)", (nome, email, endereco))
 
             con.commit()
             msg = "Informações inseridas com sucesso"
@@ -32,12 +32,12 @@ def gravar():
 
 
 @app.route('/listar')
-def list():
+def listar():
     con = sql.connect("database.db")
     con.row_factory = sql.Row
 
     cur = con.cursor()
-    cur.execute("select * from usuarios")
+    cur.execute("select * from users")
 
     rows = cur.fetchall()
     return render_template("listar.html", rows=rows)

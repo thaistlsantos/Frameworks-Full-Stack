@@ -1,3 +1,8 @@
+# Integrantes:
+# Beatriz Garcia de Andrade - 1904895
+# Thais de Lima Santos - 1202134
+
+
 from flask import Flask, render_template, request
 import conexao
 

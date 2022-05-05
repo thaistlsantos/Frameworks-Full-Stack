@@ -30,17 +30,3 @@ def gravar(nome, email, endereco):
     con.commit()
     cur.close()
     con.close()
-
-def estrutura_banco():
-
-    con = sqlite3.connect('cadastro_dados.db')
-
-    cur = con.cursor()
-
-    cur.execute('''CREATE TABLE funcionarios (nome text, email text, endereco text)''')
-
-    con.commit()
-    cur.close()
-    con.close()
-
-estrutura_banco()
